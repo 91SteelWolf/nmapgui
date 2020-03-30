@@ -1,4 +1,4 @@
-import tcp_scan
+from .. import tcp_scan
 
 def test_tcpscan():
     test1 = tcp_scan.TcpScan("192.168.0.254")
