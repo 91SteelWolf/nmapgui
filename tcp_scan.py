@@ -19,6 +19,7 @@ class TcpScan:
 
     # Scan all TCP ports and print the open ones
     # TODO: return an array of open ports
+    # TODO: add threads to speed up the scan
     def scan_all_ports(self):
         for i in range(0, 65536):
             if self.scan_port(i):
