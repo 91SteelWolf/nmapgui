@@ -5,7 +5,6 @@ class TcpScan:
     def __init__(self, ip):
         self.ip = ip
 
-    # 
     # Scan one TCP port with a timeout of 1s
     def scan_port(self, port):
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
