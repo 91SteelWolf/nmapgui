@@ -14,10 +14,12 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setWindowTitle("Pymap GUI")
         self.start_scan.pressed.connect(self.scan)
 
+    # When pushing the scan button, get the IP from the text area
     def scan(self):
         ip = self.ip_input.text()
-        r = Ip(ip).get_range_from_ip(ip)
-        
+        r = Ip(ip)
+        r.check_ip(ip)
+
 def main():
     app = QtWidgets.QApplication(sys.argv)
     window = MainWindow()
